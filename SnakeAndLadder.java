@@ -5,16 +5,28 @@ public class SnakeAndLadder{
       Random random=new Random(); 
      System.out.println("Welcome to Snake And Ladder Simulator");
        int first_player_score=0; 
-       int dice=random.nextInt(6)+1;
+
+while (first_player_score <100) {
+        int dice=random.nextInt(6)+1;
        int move=random.nextInt(3);
        if(move==0){
-        System.out.println("No Move Player Will be in same position");
+        first_player_score=first_player_score+0;
        } 
       else  if(move==1){
-        System.out.println("The players Score is Increased by : "+dice);
-       }
+        if(dice+first_player_score<=100){
+            first_player_score=first_player_score+dice;
+        }
+    }
       else{
-        System.out.println("The Players Score Is Decreased By : " +dice);
+        if(first_player_score<dice){
+            first_player_score=first_player_score-0;
+        }
+        else{
+            first_player_score=first_player_score-dice;
+        }
       }
+
+}
+System.out.println(first_player_score);
     }
 }
