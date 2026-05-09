@@ -5,7 +5,7 @@ public class SnakeAndLadder{
       Random random=new Random(); 
      System.out.println("Welcome to Snake And Ladder Simulator");
        int first_player_score=0; 
-
+       int moves=0;
 while (first_player_score <100) {
         int dice=random.nextInt(6)+1;
        int move=random.nextInt(3);
@@ -25,6 +25,8 @@ while (first_player_score <100) {
             first_player_score=first_player_score-dice;
         }
       }
+      moves++;
+      System.out.println(moves+" - "+first_player_score);
 
 }
 System.out.println(first_player_score);
